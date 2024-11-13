@@ -3,7 +3,7 @@ import 'package:gemini_ai/pages/chat_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Gemini AI',
       theme: ThemeData().copyWith(
-        textTheme: GoogleFonts.latoTextTheme(Theme.of(context).textTheme),
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
       ),
-      home: ChatPage(),
+      home: const HomeScreen(),
     );
   }
 }
